@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Online Ticket Purchase</title>
+</head>
+<body>
+    <header>
+        <h1>Online Ticket Purchase</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Movies</a></li>
+            <li><a href="">Tickets</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Order Details</h2>
+        <form action="ordersummary.php" method="post">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+
+            <label for="cinema">Cinema to Watch:</label>
+            <select id="cinema" name="cinema">
+                <option value="Cinema 1">Cinema 1</option>
+                <option value="Cinema 2">Cinema 2</option>
+                <option value="Cinema 3">Cinema 3</option>
+                <option value="Cinema 4">Cinema 4</option>
+                <option value="Cinema 5" selected>Cinema 5</option>
+            </select><br><br>
+
+            <label for="numTickets">Number of Tickets:</label>
+            <input type="number" id="numTickets" name="numTickets" min="1" max="10" required><br><br>
+
+            <label for="addOns">Add-ons (optional):</label><br>
+            <input type="checkbox" id="popcorn" name="addOns[]" value="Popcorn">
+            <label for="popcorn">Popcorn</label><br>
+            <input type="checkbox" id="drinks" name="addOns[]" value="Drinks">
+            <label for="drinks">Drinks</label><br>
+            <input type="checkbox" id="burger" name="addOns[]" value="Burger">
+            <label for="burger">Burger</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
